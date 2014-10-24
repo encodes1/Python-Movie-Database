@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>{% block title %}movies.d12.co{% endblock %}</title>
+    {% block css %}
+        <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    {% endblock %}
+    {% block script %}
+
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+
+
+    <div id="header">{% block header %}{% endblock %}</div>
+
+
+    <div id="content" class="container">
+        <div class="row">
+            {% block content %}{% endblock%}
+        </div>
+    </div>
+    <div id="footer">{% block footer %}{% endblock%}</div>
+</div>
+</body>
+</html>

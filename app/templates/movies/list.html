@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>movies ({{ movies.count() }})</h2>
+    {% for movie in movies %}
+        <div class="col-md-3">
+            <a href="{{movie.get_url() }}"><img class="img-thumbnail" src="{{movie.image}}"></a>
+            <p><a href="{{movie.get_url() }}">{{ movie.title }}</a><p>
+        </div>
+    {% endfor %}
+{% endblock %}

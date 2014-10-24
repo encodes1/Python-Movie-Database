@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="col-md-5">
+        <h1>{{ movie.title }}</h1>
+        <hr/>
+        <img src="{{movie.image}}" width="240px">
+    </div>
+    <div class='col-md-7'>
+        <br/><br/>
+        <h2>Genres</h2>
+        <ul>
+            {% for genre in movie.genres.all() %}
+                <li>{{ genre.genre.name }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Cast</h2>
+        <ul>
+            {% for cast in movie.cast %}
+                <li><a href="#">{{ cast.getPersonName() }}</a> as {{ cast.charactor }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    </div>
+{% endblock %}
